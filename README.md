@@ -34,4 +34,13 @@ optional utilities and extensions to make the JupyterLite experience more enjoya
 
 For a template based on the Xeus kernel, see the [`jupyterlite/xeus-python-demo` repository](https://github.com/jupyterlite/xeus-python-demo)
 
+## Matplotlib の日本語フォント対応
 
+この JupyterLite サイトでは、Pyodide カーネル向けに `japanize-matplotlib-jlite` の wheel を同梱しています。
+`%pip install` はインターネットからではなく、このサイト内に同梱された wheel から行われます。
+日本語ラベルを描画するノートブックでは、新しく起動したカーネルごとに最初に次のセルを実行してください:
+
+```python
+%pip install -q japanize-matplotlib-jlite
+import japanize_matplotlib_jlite
+```
